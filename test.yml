@@ -1,8 +1,7 @@
 ---
-  - name: httpd is there
-    hosts: all
+  - name: Check the remote host uptime
+    hosts: testservers
     tasks:
-      - name: check 4 service is installed or not
-        yum:
-         name: httpd
-         state: present
+      - name: Execute the Uptime command over Command module
+        register: uptimeoutput
+        command: "uptime"
