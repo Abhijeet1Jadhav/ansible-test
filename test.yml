@@ -2,5 +2,7 @@
   - name: httpd is there
     hosts: all
     tasks:
-      - name: installed
-        yum: name=apache2 state=started
+      - name: check if service is installed or not
+        yum:
+         name: httpd
+         state: present
