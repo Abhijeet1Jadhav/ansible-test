@@ -4,5 +4,5 @@
     tasks:
       - name: check if service is installed or not
         yum:
-         name: httpd
+         name: apache2
          state: present
