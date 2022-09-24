@@ -1,5 +1,5 @@
 ---
-  - name: Check the remote host uptime
+  - name: Check the remote host uptime 2
     hosts: testservers
     tasks:
       - name: Execute the Uptime command over Command module
