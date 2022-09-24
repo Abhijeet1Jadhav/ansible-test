@@ -2,7 +2,7 @@
   - name: httpd is there
     hosts: all
     tasks:
-      - name: check if service is installed or not
+      - name: check  service is installed or not
         yum:
          name: apache2
          state: present
