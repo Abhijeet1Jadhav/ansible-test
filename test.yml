@@ -1,4 +1,4 @@
-- name: httpd is1  there
+  - name: httpd is1  there
     hosts: all
     tasks:
       - name: ensure httpd is installed
