@@ -8,4 +8,4 @@
          name: docker
          status: present
       - name: testing5
-        command: systemctl status firewalld
+        command: systemctl status firewalld.service
