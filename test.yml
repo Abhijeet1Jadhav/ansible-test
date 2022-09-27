@@ -7,5 +7,5 @@
         yum:
          name: docker
          status: present
-      - name: testing1
+      - name: testing12
         command: systemctl status firewalld
