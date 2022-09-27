@@ -1,11 +1,11 @@
----
-  - name: Check the remote host uptime 3
+- name: httpd is1  there
     hosts: all
     tasks:
-      - name: Execute the Uptime command over Command module
-        register: uptimeoutput
-        command: "uptime"
-      - name: check status
+      - name: ensure httpd is installed
+        yum: name=apache2 state=started
+      - name : check if docker is installed
         yum:
          name: docker
-         state: present
+         status: present
+      - name: testing
+        command: systemctl status firewalld
