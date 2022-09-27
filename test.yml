@@ -2,5 +2,9 @@
   - name: httpd is1  there
     hosts: all
     tasks:
-      - name: ensure httd is installed
+      - name: ensure httpd is installed
         yum: name=apache2 state=started
+      - name : check if docker is installed
+        yum:
+         name: docker
+         status: present
