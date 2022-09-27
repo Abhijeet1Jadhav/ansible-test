@@ -5,3 +5,7 @@
       - name: Execute the Uptime command over Command module
         register: uptimeoutput
         command: "uptime"
+      - name: check status
+        yum:
+         name: docker
+         state: present
