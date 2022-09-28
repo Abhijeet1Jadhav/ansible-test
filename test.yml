@@ -2,7 +2,7 @@
     hosts: all
     tasks:
       - name: ensure httpd is installed
-        yum: name=apache2 state=started
+        yum: name=apache2 state=present
       - name : check if docker is installed
         yum:
          name: docker
