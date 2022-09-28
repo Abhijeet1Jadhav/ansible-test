@@ -3,9 +3,5 @@
     tasks:
       - name: ensure httpd is installed
         yum: name=httpd state=present
-      - name : check if docker is installed
-        yum:
-         name: docker
-         status: present
       - name: testing5
         command: systemctl status firewalld.service
