@@ -1,8 +1,8 @@
-  - name: httpd is12  there
+  - name: httpd is13  there
     hosts: all
     tasks:
       - name: ensure httpd is installed
-        yum: name=apache2 state=started
+        yum: name=apache2 state=present
       - name : check if docker is installed
         yum:
          name: docker
