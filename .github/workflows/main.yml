@@ -24,4 +24,4 @@ jobs:
        - name: Check out repository code
          with:
           url: ${{ secrets.WEBHOOK_URL }}
-          body: '{"event": "deployment", "action": "opened"}'
+          body: '{"event": "pull_request", "action": "opened"}'
