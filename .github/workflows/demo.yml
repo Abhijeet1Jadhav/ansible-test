@@ -24,7 +24,7 @@ jobs:
     steps: 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       
-      - uses: actions/ansible-test@master
+      - uses: actions/Abhijeet1Jadhav/ansible-test@master
 
       # Runs a single command using the runners shell
       - name: Run workflow  
