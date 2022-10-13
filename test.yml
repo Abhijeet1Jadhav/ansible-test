@@ -1,7 +1,16 @@
-  - name: httpd is13  there
-    hosts: all
-    tasks:
-      - name: ensure httpd is installed
-        yum: name=httpd state=present
-      - name: testing7
-        command: systemctl status firewalld.service
+---
+- name: Install Telnet and check SQL
+  hosts: all
+    
+  tasks:
+  
+  - name: Check SQL Server is Installed
+    win_service:
+     name: MSSQLSERVER
+    register: sqlstatus
+  - name: Start SQL Service
+    win_service:
+     name: MSSQLSERVER
+     start_mode: auto
+     state: started
+    when: sqlstatus.exists
