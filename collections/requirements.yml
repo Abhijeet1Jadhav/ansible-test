@@ -1,2 +1,4 @@
 collections:
 - name: community.aws
+module:
+- name: ansible.module_utils.my_utils
