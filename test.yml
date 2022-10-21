@@ -1,16 +1,11 @@
----
-- name: Install Telnet and check SQL
-  hosts: all
-    
+- name: Install a Nginx Package
+  connection: community.aws.aws_ssm
+  vars:
+    ansible_connection: community.aws.aws_ssm
+    ansible_aws_ssm_bucket_name: nameofthebucket
+    ansible_aws_ssm_region: us-west-2
   tasks:
-  
-  - name: Check SQL Server is Installed
-    win_service:
-     name: MSSQLSERVER
-    register: sqlstatus
-  - name: Start SQL Service
-    win_service:
-     name: MSSQLSERVER
-     start_mode: auto
-     state: started
-    when: sqlstatus.exists
+    - name: Install a Nginx Package
+      yum:
+        name: nginx
+        state: present
