@@ -2,10 +2,12 @@
 - name: Install Telnet and check SQL
   hosts: all
   gather_facts: no
+    vars:
+    ansible_connection: aws_ssm
+    ansible_aws_ssm_bucket_name: test-ansible-abhijeet
+    ansible_aws_ssm_region: us-east-1
   tasks:
     - name: Install a Nginx Package
       yum:
         name: nginx
         state: present
-
-
