@@ -3,7 +3,7 @@
   hosts: all
   gather_facts: no
   tasks:
-    - name: Install a Nginx Package
+    - name: Install a httpd Package
       yum:
         name: httpd
         state: present
