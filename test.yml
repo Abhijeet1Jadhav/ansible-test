@@ -5,5 +5,5 @@
   tasks:
     - name: Install a Nginx Package
       yum:
-        name: nginx
+        name: httpd
         state: present
